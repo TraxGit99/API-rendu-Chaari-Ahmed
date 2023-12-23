@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            color: #3498db;
+            font-weight:bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db; /* Blueish color for the button */
+            color: #fff; /* White text for visibility */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Darker shade on hover */
+        }
+    </style>
+    <title>Find Information</title>
+</head>
+<body>
+<div th:replace="navbar :: navbar"></div>
+
+<form action="/meteo" method="post">
+    <div>
+        <label for="address" >Please input your address:</label>
+        <input name="address" id="address">
+    </div>
+    <div>
+        <button type="submit">Get the weather at the given address!</button>
+    </div>
+</form>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
